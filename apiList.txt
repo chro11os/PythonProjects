@@ -1,0 +1,47 @@
+AUTHOR - NEIL BRAGS "CHRO11OS" GUZMAN
+FRIDAY APR 19 2024
+PYTHON PROJECTS
+
+API LIST FOR FUTURE PROJECTS, I COMPILED SOME API LIST THAT ARE FREE OF USE
+
+ -Unsplash API: Provides access to a large collection of high-quality, free images.
+ -Youtube API: Allows developers to integrate YouTube videos and functionality into applications.
+ -Watchmode API: Offers information about movies and TV shows, including where to watch them online.
+ -Pantry API: Manages and tracks food inventory, recipes, and shopping lists.
+ -Clearbit API: Provides business intelligence tools, including company and employee data.
+ -Waifu API: Generates random anime-style waifu images.
+ -IGDB API: Provides access to a database of video game information, including games, platforms, and reviews.
+ -Discord API: Allows developers to create custom integrations with the Discord chat platform.
+ -World News API: Provides access to news articles from around the world.
+ -Random Data API: Generates random data for testing and development purposes.
+ -Foreign Rates API: Provides exchange rates for different currencies.
+ -Svix API: Offers webhooks as a service for sending and receiving HTTP notifications.
+ -Kroki API: Converts text-based diagrams into images.
+ -Google Docs API: Allows developers to programmatically access and manipulate Google Docs documents.
+ -HTTP Status Dogs API: Returns images of dogs representing various HTTP status codes.
+ -GeoKeo API: Provides geocoding and reverse geocoding services.
+ -Machinet API: Integrates GPT-4 (text-based AI) into JetBrains IDEs.
+ -TicketMaster API: Offers access to events, venues, and ticketing information.
+ -Ilovepdf API: Provides tools for working with PDF files, such as merging and converting.
+ -CloudConvert API: Allows file conversion between different formats.
+ -Ollama API: Offers various APIs for text, image, and video processing.
+ -Free Dictionary API: Provides access to dictionary and thesaurus data.
+ -Open Weather API: Offers weather data, forecasts, and historical weather information.
+ -Alpha Vantage API: Provides financial market data, including stock quotes and exchange rates.
+ -Yahoo Finance API: Offers financial market data, news, and analysis.
+ -Deck of Cards API: Provides random playing card images and information.
+ -Wordpress API: Allows developers to interact with WordPress sites programmatically.
+ -Spotify API: Provides access to Spotify music catalog and user data.
+ -Podcast Index API: Offers podcast information and search functionality.
+ -Deepgram AI API: Provides speech-to-text and other AI-powered audio analysis services.
+ -Zen Quotes API: Returns random inspirational quotes.
+ -Open Food Facts API: Provides food product information and nutritional data.
+ -Stripe API: Allows developers to integrate payment processing into applications.
+ -Resend API: Provides email resend functionality for managing email campaigns.
+ -Trace.moe API: Offers anime scene search by image.
+ -TickTick API: Integrates with the TickTick task management platform.
+ -Alpaca API: Provides commission-free trading services and market data.
+ -NASA API: Offers various APIs for accessing NASA data, including images, Mars rover data, and astronomy picture of the day.
+ -The Movie DB API: Provides movie and TV show information, including details, ratings, and trailers.
+ -Digidates API: Offers date-related information and utilities.
+ -OpenSky Network API: Provides access to air traffic data and aircraft information.
