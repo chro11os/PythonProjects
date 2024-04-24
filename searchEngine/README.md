@@ -1,20 +1,30 @@
-# backend Planning Process
--- Make a Search Engine Back End for the Search Engine
--- python should be good since im learning it
--- i need to figure out the file structures first 
--- Get API key from google custom search api
+# Search Engine Backend - Terminal
 
-# Backend
+This repository contains the backend for a search engine. It is written in Python and includes modules for speed testing, IP tracking, and remote SSH connection.
 
-This folder contains the backend for the search engine. 
+## Foreword
+This backend can be used on your own local terminal, so if you want to use it on terminal only, you can do that! Ciao!
 
-## Components
+## Usage
 
-- `speedtest.py`: This module is responsible for performing speed tests on a network connection.
-- `iptracker.py`: This module allows you to track the IP address of a device.
-- `remotessh.py`: This module allows you to establish a remote SSH connection.
+To use this software, follow these steps:
 
-## Installation
+1. Clone the repository to your local machine.
+2. Install the dependencies by running `pip install -r requirements.txt` in the project directory.
+3. Run the desired module with `python <module_name>.py`, e.g. `python speedtest.py`.
 
-To install the dependencies for this project, run the following command in your terminal:
+## Modules
+
+- `speedtest.py`: Performs network speed tests.
+- `iptracker.py`: Tracks the IP address of a device.
+- `remotessh.py`: Establishes a remote SSH connection.
+
+## Requirements
+
+The software requires Python 3.x. The dependencies can be installed by running `pip install -r requirements.txt` in the project directory.
+
+## License
+
+This software is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
 

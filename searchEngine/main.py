@@ -50,3 +50,4 @@ if __name__ == "__main__":
         if query.lower() == 'exit':
             break
         search(query)
+
