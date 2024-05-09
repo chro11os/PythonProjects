@@ -1,9 +1,7 @@
-import tkinter as tk
+from flask import Flask
 
-window = tk.Tk()
-window.title("test window")
-window.geometry("1000x500")
-label = tk.Label(window, text="hello world")
-window.mainloop()
+app = Flask(__name__)
 
-
+@app.route('/')
+def hello():
+    return 'Hello, World!'
