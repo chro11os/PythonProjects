@@ -53,7 +53,7 @@ class MemorySimulator:
                     self.gantt_data.append((process_id, self.total_time))
                     allocated = True
                     break
-
+            
             if not allocated:
                 compaction_time = self.compact_memory()
                 self.total_time += compaction_time
