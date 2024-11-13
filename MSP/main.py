@@ -4,6 +4,7 @@ from tkinter import messagebox
 import matplotlib.pyplot as plt
 from typing import List, Tuple, Optional
 
+
 class MemorySimulator:
     def __init__(self, memory_size: int, block_size: int, sc_time: int, ch_time: int):
         if memory_size % block_size != 0:
@@ -53,7 +54,7 @@ class MemorySimulator:
                     self.gantt_data.append((process_id, self.total_time))
                     allocated = True
                     break
-            
+
             if not allocated:
                 compaction_time = self.compact_memory()
                 self.total_time += compaction_time
@@ -73,6 +74,7 @@ class MemorySimulator:
                 return None, None
 
         return self.total_time, self.gantt_data
+
 
 def run_simulation():
     try:
@@ -115,6 +117,7 @@ def run_simulation():
     except ValueError:
         messagebox.showerror("Input Error", "Please ensure all inputs are valid integers.")
 
+
 def create_process_fields():
     try:
         num_processes = int(num_processes_entry.get())
@@ -129,11 +132,14 @@ def create_process_fields():
         process_size_entries = []
         process_time_entries = []
 
-        tk.Label(process_frame, text="Process Size", font=("Helvetica", 12), fg="black", bg="gold").grid(row=0, column=1)
-        tk.Label(process_frame, text="Process Time", font=("Helvetica", 12), fg="black", bg="gold").grid(row=0, column=2)
+        tk.Label(process_frame, text="Process Size", font=("Helvetica", 12), fg="black", bg="gold").grid(row=0,
+                                                                                                         column=1)
+        tk.Label(process_frame, text="Process Time", font=("Helvetica", 12), fg="black", bg="gold").grid(row=0,
+                                                                                                         column=2)
 
         for i in range(num_processes):
-            tk.Label(process_frame, text=f"Process {i + 1}:", font=("Helvetica", 12), fg="black", bg="gold").grid(row=i + 1, column=0, padx=5, pady=2)
+            tk.Label(process_frame, text=f"Process {i + 1}:", font=("Helvetica", 12), fg="black", bg="gold").grid(
+                row=i + 1, column=0, padx=5, pady=2)
 
             size_entry = tk.Entry(process_frame, font=("Helvetica", 12), fg="black", bg="gold", width=10)
             size_entry.grid(row=i + 1, column=1, padx=5, pady=2)
@@ -145,6 +151,7 @@ def create_process_fields():
 
     except ValueError:
         messagebox.showerror("Input Error", "Please enter a valid number of processes.")
+
 
 def visualize_memory(memory, gantt_chart_data):
     fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8))
@@ -160,7 +167,8 @@ def visualize_memory(memory, gantt_chart_data):
     ax1.set_xlabel("Block Number")
     ax1.set_ylabel("Status")
 
-    legend_elements = [plt.Rectangle((0, 0), 1, 1, facecolor=color_map[pid], label=f'Process {pid}') for pid in unique_processes]
+    legend_elements = [plt.Rectangle((0, 0), 1, 1, facecolor=color_map[pid], label=f'Process {pid}') for pid in
+                       unique_processes]
     legend_elements.append(plt.Rectangle((0, 0), 1, 1, facecolor='white', label='Free'))
     ax1.legend(handles=legend_elements, loc='upper right')
 
@@ -184,7 +192,6 @@ def visualize_memory(memory, gantt_chart_data):
     plt.draw()  # Redraw the plot to make sure it's updated
 
 
-
 root = tk.Tk()
 root.title("MemoPlusGold (First Fit)")
 root.geometry("1000x600")
@@ -205,23 +212,36 @@ right_frame.grid(row=0, column=1, padx=20, pady=20, sticky="nsew")
 input_frame = tk.Frame(left_frame, bg="black")
 input_frame.pack(pady=20)
 
-tk.Label(input_frame, text="Memory Size:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=0, column=0, padx=10, pady=10, sticky="w")
+tk.Label(input_frame, text="Memory Size:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=0, column=0,
+                                                                                                       padx=10, pady=10,
+                                                                                                       sticky="w")
 memory_size_entry = tk.Entry(input_frame, font=("Helvetica", 14), fg="gold", bg="black", bd=2)
 memory_size_entry.grid(row=0, column=1, padx=10, pady=10)
 
-tk.Label(input_frame, text="Block Size:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=1, column=0, padx=10, pady=10, sticky="w")
+tk.Label(input_frame, text="Block Size:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=1, column=0,
+                                                                                                      padx=10, pady=10,
+                                                                                                      sticky="w")
 block_size_entry = tk.Entry(input_frame, font=("Helvetica", 14), fg="gold", bg="black", bd=2)
 block_size_entry.grid(row=1, column=1, padx=10, pady=10)
 
-tk.Label(input_frame, text="Number of Processes:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=2, column=0, padx=10, pady=10, sticky="w")
+tk.Label(input_frame, text="Number of Processes:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=2,
+                                                                                                               column=0,
+                                                                                                               padx=10,
+                                                                                                               pady=10,
+                                                                                                               sticky="w")
 num_processes_entry = tk.Entry(input_frame, font=("Helvetica", 14), fg="gold", bg="black", bd=2)
 num_processes_entry.grid(row=2, column=1, padx=10, pady=10)
 
-tk.Label(input_frame, text="Storage Compaction Time:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=3, column=0, padx=10, pady=10, sticky="w")
+tk.Label(input_frame, text="Storage Compaction Time:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(
+    row=3, column=0, padx=10, pady=10, sticky="w")
 sc_time_entry = tk.Entry(input_frame, font=("Helvetica", 14), fg="gold", bg="black", bd=2)
 sc_time_entry.grid(row=3, column=1, padx=10, pady=10)
 
-tk.Label(input_frame, text="Coalescing Holes Time:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=4, column=0, padx=10, pady=10, sticky="w")
+tk.Label(input_frame, text="Coalescing Holes Time:", font=("Helvetica", 14, "bold"), fg="gold", bg="black").grid(row=4,
+                                                                                                                 column=0,
+                                                                                                                 padx=10,
+                                                                                                                 pady=10,
+                                                                                                                 sticky="w")
 ch_time_entry = tk.Entry(input_frame, font=("Helvetica", 14), fg="gold", bg="black", bd=2)
 ch_time_entry.grid(row=4, column=1, padx=10, pady=10)
 
@@ -230,10 +250,12 @@ process_frame = tk.Frame(left_frame, bg="black")
 process_frame.pack(fill="x", pady=20)
 
 # Buttons for creating process fields and running the simulation
-create_button = tk.Button(left_frame, text="Create Process Fields", font=("Helvetica", 14, "bold"), fg="black", bg="gold", command=create_process_fields)
+create_button = tk.Button(left_frame, text="Create Process Fields", font=("Helvetica", 14, "bold"), fg="black",
+                          bg="gold", command=create_process_fields)
 create_button.pack(pady=10)
 
-submit_button = tk.Button(left_frame, text="Run Simulation", font=("Helvetica", 14, "bold"), fg="black", bg="gold", command=run_simulation)
+submit_button = tk.Button(left_frame, text="Run Simulation", font=("Helvetica", 14, "bold"), fg="black", bg="gold",
+                          command=run_simulation)
 submit_button.pack(pady=10)
 
 # Result Label in the right frame
